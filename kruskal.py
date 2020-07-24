@@ -1,7 +1,7 @@
 def kruskal(graph):
     assert type(graph)==dict
-
-    nodes = graph.keys()   
+    
+    nodes = list(graph)
     visited = set()
     path = []
     next = None
@@ -33,5 +33,5 @@ if __name__ == '__main__':
     }
 
     path = kruskal(graph_dict)
-    print path
+    print(path)
 

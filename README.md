@@ -9,5 +9,5 @@ This repository contain some classical graph algorithms like Dijkstra,Floyd.
 	cd graph_algorithm
 	python dijkstra.py
 
-
+support python3
 

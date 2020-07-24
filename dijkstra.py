@@ -2,9 +2,9 @@ def dijkstra(graph,src):
     length = len(graph)
     type_ = type(graph)
     if type_ == list:
-        nodes = [i for i in xrange(length)]
+        nodes = [i for i in range(length)]
     elif type_ == dict:
-        nodes = graph.keys()
+        nodes = list(graph)
 
     visited = [src]
     path = {src:{src:[]}}
@@ -51,6 +51,8 @@ if __name__ == '__main__':
     }
 
     distance, path = dijkstra(graph_list, 2)
-    #print distance, '\n', path
+    print('list distance:', distance)
+    print('list path:', path)
     distance, path = dijkstra(graph_dict, 's1')
-    print distance, '\n', path
+    print('dict distance:', distance)
+    print('dict path:', path)
